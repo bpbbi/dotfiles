@@ -1,0 +1,11 @@
+[Unit]
+Description=Kmonad start
+After=network.target
+
+[Service]
+ExecStart=/home/qd/opt/bin/kmonad /home/qd/.config/kmonad/config.kbd
+Restart=always
+User=qd
+
+[Install]
+WantedBy=multi-user.target
