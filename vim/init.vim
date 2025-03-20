@@ -30,7 +30,6 @@ nnoremap <Leader>t   :Tags<CR>
 nnoremap <Leader>m   :Marks<CR>
 nnoremap <Leader>M   :delmarks A-Z<CR> :delmarks 0-9<CR> :delm!<CR>
 
-
 " Plug manager
 call plug#begin()
 Plug 'tpope/vim-sensible' " Like conventional shit or smth
@@ -47,4 +46,8 @@ set termguicolors " enable true colors support
 "let ayucolor="light"  " for light version of theme
 let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+try
+  colorscheme ayu
+catch /^Vim\%((\a\+)\)\=:E185/
+  
+endtry
