@@ -25,16 +25,22 @@ else
 fi
 
 #vim
-CONF_VIM=~/.vimrc
-DEV_VIM=$CUR_DIR/vim/init.vim
-AUTOLOAD_PATH_VIM=~/.vim/autoload/
-DEV_AUTOLOAD_PATH_VIM=$CUR_DIR/vim/autoload/*
+VIM_CONF_DIR=~/.vim/
+VIM_CONF_FILES=$VIM_CONF_DIR/*.vim
+VIM_AUTOLOAD_DIR=$VIM_CONF_DIR/autoload/
+
+DEV_VIM_CONF_FILES=$CUR_DIR/vim/*.vim
+DEV_VIM_RC=$CUR_DIR/vim/vimrc
+DEV_VIM_AUTOLOAD_FILES=$CUR_DIR/vim/autoload/*
 #vim -u NONE -c 'try | source $DEV_AUTOLOAD_PATH_VIM | source $DEV_VIM | catch | cq | endtry | q'
 #errcode=$?
 #if [ $errcode -eq 0 ]; then
-mkdir -p $AUTOLOAD_PATH_VIM 
-cp $DEV_AUTOLOAD_PATH_VIM $AUTOLOAD_PATH_VIM
-cp $DEV_VIM $CONF_VIM
+mkdir -p $VIM_AUTOLOAD_DIR
+
+cp $DEV_VIM_RC $VIM_CONF_DIR
+cp $DEV_VIM_AUTOLOAD_FILES $VIM_AUTOLOAD_DIR
+cp $DEV_VIM_CONF_FILES $VIM_CONF_DIR
+vim -c 'PlugInstall' -c 'qa'
 #else 
 #echo Checking vim config exited with non zero code
 #fi 
