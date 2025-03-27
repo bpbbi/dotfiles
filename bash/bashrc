@@ -92,9 +92,11 @@ alias ll='ls -la'
 # Exit aliace
 alias :q='exit'
 
-# Add PATH
+# Add local
 export PATH="$HOME/.local/bin:$PATH"
-
+# Go path
+export PATH="/usr/lib/go-1.23/bin:$PATH"
 # Default Downloads
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export XDG_PICTURES_DIR="$HOME/Pictures"
+
