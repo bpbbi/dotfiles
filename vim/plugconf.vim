@@ -11,6 +11,9 @@ call plug#begin()
   " Low distraction mode
   Plug 'junegunn/goyo.vim'
   Plug 'https://github.com/amix/vim-zenroom2'
+  " Git plugins
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Color scheme
