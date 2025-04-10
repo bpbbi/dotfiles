@@ -14,3 +14,5 @@ compinit
 alias ls='ls --color'
 alias ll='ls --color -la'
 alias :q='exit'
+# Add go path
+path+=('/usr/lib/go-1.23/bin/')
