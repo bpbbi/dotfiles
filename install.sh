@@ -21,9 +21,9 @@ DEV_KMONAD=$CUR_DIR/kmonad/config.kbd
 kmonad -d $DEV_KMONAD
 errcode=$? 
 if [ $errcode -eq 0 ]; then 
- cp $DEV_KMONAD $CONF_KMONAD 
+  cp $DEV_KMONAD $CONF_KMONAD 
 else
- echo Checking kmonad config exit with non zero code
+  echo Checking kmonad config exit with non zero code
 fi
 
 #vim

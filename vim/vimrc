@@ -30,4 +30,4 @@ source ~/.vim/plugconf.vim
 source ~/.vim/goconf.vim
 "" Keybindings
 source ~/.vim/keybindings.vim
-
+source ~/.vim/fzfkeymappings.vim
