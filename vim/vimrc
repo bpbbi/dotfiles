@@ -21,6 +21,8 @@ filetype plugin on
 set completeopt=menuone,noinsert,noselect
 " See pressed key
 set showcmd
+" Linters
+let g:syntastic_yaml_checkers = ['yamllint']
 " External configs 
 "" Thirdparty (stolen) ideas
 source ~/.vim/thirdpartyideas.vim

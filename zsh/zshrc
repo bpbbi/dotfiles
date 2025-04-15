@@ -14,7 +14,7 @@ compinit
 # End of lines added by compinstall
 
 alias ls='ls --color'
-alias ll='ls --color -la'
+alias ll='ls --color -lA --group-directories-first'
 alias :q='exit'
 # Add go path
 path+=('/usr/lib/go-1.23/bin/')
@@ -22,22 +22,29 @@ path+=('/usr/lib/go-1.23/bin/')
 # Prompt
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
-print_head() { 
-    #print -rP "%(?.%F{green}●.%F{red}●%f)%f┌%n@%M%f %F{#55dddd}%~ %F{#60eb0d}${vcs_info_msg_0_}%f"
+NEWLINE=$'\n'
+print_path() {
     local previous_exit_code=$?
-    local error_indicator
-    if [ $previous_exit_code -ne 0 ]; then
-       error_indicator="%F{#ebabab}●%f"
-    else
-       error_indicator="%F{#60ed0d}●%f"
-    fi
     local cpath
     if git rev-parse --is-inside-work-tree &> /dev/null; then
         cpath="$vcs_info_msg_0_"
     else
-        cpath="%F{#55dddd}%~%f"
+        cpath="%~"
     fi
-    print -rP "$error_indicator$cpath"
+    print -rP %F{#55dddd}$cpath%f
+    return $previous_exit_code
+}
+print_dot() { 
+    local previous_exit_code=$?
+    #print -rP "%(?.%F{green}●.%F{red}●%f)%f┌%n@%M%f %F{#55dddd}%~ %F{#60eb0d}${vcs_info_msg_0_}%f"
+    local error_indicator
+    #error_indicator='%(?.%F{#60ed0d}●%f.%F{#ebabab}●%f)'
+    if [[ $previous_exit_code != 0 ]]; then
+       error_indicator="%F{#ebabab}●%f"
+    else
+       error_indicator="%F{#60ed0d}●%f"
+    fi
+    print -P "$error_indicator"
     return $previous_exit_code
 }
 
@@ -47,6 +54,5 @@ zstyle ':vcs_info:git:*' stagedstr "+"    # string for %c
 zstyle ':vcs_info:git:*' unstagedstr "-"  # string for %u
 
 precmd_functions+=( precmd_vcs_info )
-precmd_functions+=( print_head )
 setopt PROMPT_SUBST
-PROMPT='%# '
+PROMPT='$(print_dot)$(print_path)$NEWLINE%# '
