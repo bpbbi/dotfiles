@@ -1,4 +1,4 @@
-Script installs configuration files for linux system
+Script installs configuration files
 ```bash
 $> ./install.sh
 ```
