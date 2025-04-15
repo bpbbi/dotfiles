@@ -23,10 +23,10 @@ path+=('/usr/lib/go-1.23/bin/')
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 # NEWLINE=$'\n'
-zstyle ':vcs_info:git:*' formats '%F{#55dddd}%S%f %r%F{#10eb0d}%b%f %m%u%c%a'
+zstyle ':vcs_info:git:*' formats '%F{#55dddd}%S%f %r%F{#55dddd}%f%F{#10eb0d}%b%f %m%u%c%a'
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr ''    # string for %c
-zstyle ':vcs_info:git:*' unstagedstr ''  # string for %u
+zstyle ':vcs_info:git:*' stagedstr '+'    # string for %c
+zstyle ':vcs_info:git:*' unstagedstr '-'  # string for %u
 
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst # Enable parameter expansion, command substitution, and arithmetic expansion in the prompt
