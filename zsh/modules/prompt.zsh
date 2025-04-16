@@ -4,8 +4,8 @@ precmd_vcs_info() { vcs_info }
 # NEWLINE=$'\n'
 zstyle ':vcs_info:git:*' formats '%F{#55dddd}%S%f %r%F{#55dddd}%f%F{#10eb0d}%b%f %m%u%c%a'
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr '+'    # string for %c
-zstyle ':vcs_info:git:*' unstagedstr '-'  # string for %u
+zstyle ':vcs_info:git:*' stagedstr '+ '    # string for %c
+zstyle ':vcs_info:git:*' unstagedstr '- '  # string for %u
 
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst # Enable parameter expansion, command substitution, and arithmetic expansion in the prompt
@@ -16,7 +16,7 @@ add_path() {
     if git rev-parse --is-inside-work-tree &> /dev/null; then
         cpath="$vcs_info_msg_0_"
     else
-        cpath='%F{#55dddd}%~%f'
+        cpath='%F{#55dddd}%~%f '
     fi
     echo $cpath
 }
@@ -41,7 +41,7 @@ set_exit_code() {
 
 set_prompt() {
     RPROMPT='%F{#ebabab}$(set_exit_code $?)%f'
-    PROMPT='$(add_dot $?) $(add_path) %# '
+    PROMPT='$(add_dot $?) $(add_path)%# '
 }
 
 set_prompt
