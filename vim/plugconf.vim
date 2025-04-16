@@ -14,6 +14,7 @@ call plug#begin()
   " Git plugins
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+  Plug 'lifepillar/pgsql.vim'
 call plug#end()
 
 " Color scheme
@@ -23,3 +24,5 @@ let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 
+" pgsql.vim
+let g:sql_type_default = 'pgsql'

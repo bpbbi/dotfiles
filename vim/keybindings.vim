@@ -11,7 +11,9 @@ vnoremap <Leader>> <esc>`>a\><esc>`<i\<<esc>
 " Netrw
 nnoremap <Leader>e :Lexplore<CR>
 
-" Windiws
+" Editor conf
+nnoremap <C-j> J
+" Windows
 nnoremap <Leader>n :vnew<CR>
 "" Mowing between windows
 nnoremap <S-J> <C-W>j
