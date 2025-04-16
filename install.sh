@@ -11,7 +11,11 @@ cp $CUR_DIR/bash/bashrc $CONF_BASH
 
 #zsh
 CONF_ZSH=~/.zshrc
+DEV_FILES_ZSH=$CUR_DIR/zsh/modules/*.zsh
+FILES_ZSH=~/.config/zsh/
+mkdir -p $FILES_ZSH
 cp $CUR_DIR/zsh/zshrc $CONF_ZSH
+cp $DEV_FILES_ZSH $FILES_ZSH
 
 #tmux
 CONF_TMUX=~/.tmux.conf
