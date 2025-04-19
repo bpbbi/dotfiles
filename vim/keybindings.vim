@@ -6,16 +6,15 @@ vnoremap <Leader>[ <esc>`>a]<esc>`<i[<esc>
 vnoremap <Leader>{ <esc>`>a}<esc>`<i{<esc>
 vnoremap <Leader>1 <esc>`>a'<esc>`<i'<esc>
 vnoremap <Leader>2 <esc>`>a"<esc>`<i"<esc>
-vnoremap <Leader>> <esc>`>a\><esc>`<i\<<esc>
 
 " Netrw
 nnoremap <Leader>e :Lexplore<CR>
 
 " Editor conf
-nnoremap <C-j> J
+nnoremap <Leader>j J
 " Windows
 nnoremap <Leader>n :vnew<CR>
-"" Mowing between windows
+"" Moving between windows
 nnoremap <S-J> <C-W>j
 nnoremap <S-K> <C-W>k
 nnoremap <S-H> <C-W>h
@@ -24,6 +23,9 @@ nnoremap <C-S-h> <C-W>H
 nnoremap <C-S-j> <C-W>J
 nnoremap <C-S-k> <C-W>K
 nnoremap <C-S-l> <C-W>L
+"" Moving inside windows
+noremap <C-h> ^
+noremap <C-l> $
 
 " Tabs
 nnoremap <Leader><S-n> :tabnew<CR>
@@ -39,14 +41,7 @@ nnoremap <Leader>t <C-W>T
 nnoremap <Leader>z :Goyo<CR>
 
 " FZF mappings
-nnoremap <Leader>w     :Windows<CR>
-nnoremap <Leader>b     :Buffers<CR>
 nnoremap <Leader>f     :Files<CR>
 nnoremap <Leader><C-F> :Rg<CR>
-nnoremap <Leader>T     :Tags<CR>
-nnoremap <Leader>m     :Marks<CR>
-nnoremap <Leader>M     :delmarks A-Z :delmarks 0-9 :delm!<CR>
-"" Insert mode completion
-inoremap <c-s> <plug>(fzf-complete-word)
-inoremap <expr> <c-f> fzf#vim#complete#path('rg --files')
+inoremap <C-f> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
 

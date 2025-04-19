@@ -9,27 +9,46 @@ set expandtab
 set list
 nnoremap <Leader><F12> :set list!<CR>
 set listchars=tab:>-,extends:>,precedes:<,space:·
+set fillchars=eob:~,vert:│,stl:_,stlnc:_
+
+" Set colours
+set termguicolors " enable true colors support
+
 " Dumb Netrw flag to move and copy
 " https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
 let g:netrw_keepdir = 0
+
 " Line number on the left
 set rnu
 set nu
+
+" Highlight cursorline
+set cursorline
+
 " Enable file type detection
 filetype plugin on
-" Set up completion options
-set completeopt=menuone,noinsert,noselect
+
 " See pressed key
 set showcmd
+
 " Linters
 let g:syntastic_yaml_checkers = ['yamllint']
+let g:sql_type_default = 'pgsql' " Plug pgsql.vim
+
+
 " External configs 
 "" Thirdparty (stolen) ideas
 source ~/.vim/thirdpartyideas.vim
 "" Plug manager
 source ~/.vim/plugconf.vim
-"" Gomode
+"" Go mode
 source ~/.vim/goconf.vim
 "" Keybindings
 source ~/.vim/keybindings.vim
+"" FZF
 source ~/.vim/fzfkeymappings.vim
+"" Coc
+source ~/.vim/coc-example-config.vim
+"" Colours
+source ~/.vim/colours.vim
+
