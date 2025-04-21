@@ -9,8 +9,11 @@ set expandtab
 set list
 nnoremap <Leader><F12> :set list!<CR>
 set listchars=tab:>-,extends:>,precedes:<,space:·
-set fillchars=eob:~,vert:│,stl:_,stlnc:_
+set fillchars=eob:~,vert:│,stl:🮂,stlnc:🮂
 
+" Thanks to IBM punch cards
+" ...naah
+" set cc=80
 " Set colours
 set termguicolors " enable true colors support
 
@@ -22,6 +25,8 @@ let g:netrw_keepdir = 0
 set rnu
 set nu
 
+" Colorscheme
+colorscheme gecs
 " Highlight cursorline
 set cursorline
 
@@ -45,10 +50,6 @@ source ~/.vim/plugconf.vim
 source ~/.vim/goconf.vim
 "" Keybindings
 source ~/.vim/keybindings.vim
-"" FZF
-source ~/.vim/fzfkeymappings.vim
 "" Coc
-source ~/.vim/coc-example-config.vim
-"" Colours
-source ~/.vim/colours.vim
+source ~/.vim/coc-config.vim
 

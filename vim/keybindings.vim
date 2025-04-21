@@ -12,6 +12,9 @@ nnoremap <Leader>e :Lexplore<CR>
 
 " Editor conf
 nnoremap <Leader>j J
+nnoremap <Leader>w     :w<CR>
+command! W w
+
 " Windows
 nnoremap <Leader>n :vnew<CR>
 "" Moving between windows
@@ -43,5 +46,7 @@ nnoremap <Leader>z :Goyo<CR>
 " FZF mappings
 nnoremap <Leader>f     :Files<CR>
 nnoremap <Leader><C-F> :Rg<CR>
-inoremap <C-f> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
+nnoremap <Leader>m     :Marks<CR>
+nnoremap <Leader>M     :delmarks A-Z :delmarks 0-9 :delm!<CR>
+inoremap <expr> <c-s> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 0.3 }})
 
