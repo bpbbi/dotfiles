@@ -1,4 +1,4 @@
-Script installs configuration files
+# Script installs configuration files
 ```bash
 $> ./install.sh
 ```

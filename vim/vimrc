@@ -3,19 +3,20 @@
 set tabstop=4       " Number of spaces that a <Tab> counts for
 set shiftwidth=4    " Number of spaces to use for each step of (auto)indent
 set expandtab
-
+" Timeout on key strokes
+set notimeout
+set ttimeout
 " Show hiden symbols
 " autocmd BufWinEnter <buffer> match Error /\s\+$/  
 set list
 nnoremap <Leader><F12> :set list!<CR>
 set listchars=tab:>-,extends:>,precedes:<,space:·
 set fillchars=eob:~,vert:│,stl:🮂,stlnc:🮂
-
-" Thanks to IBM punch cards
-" ...naah
-" set cc=80
-" Set colours
-set termguicolors " enable true colors support
+" Case insensitive search
+set ignorecase
+set smartcase
+" Enable true colors support
+set termguicolors 
 
 " Dumb Netrw flag to move and copy
 " https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
@@ -39,7 +40,11 @@ set showcmd
 " Linters
 let g:syntastic_yaml_checkers = ['yamllint']
 let g:sql_type_default = 'pgsql' " Plug pgsql.vim
-
+" Extends if HTML
+augroup HtmlFileType
+    autocmd!
+    autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+augroup END
 
 " External configs 
 "" Thirdparty (stolen) ideas
@@ -52,4 +57,4 @@ source ~/.vim/goconf.vim
 source ~/.vim/keybindings.vim
 "" Coc
 source ~/.vim/coc-config.vim
-
+let g:coc_disable_startup_warning = 1

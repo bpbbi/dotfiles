@@ -64,7 +64,7 @@ endfunction
 
 " Vim Highlighting: (see :help highlight-groups)"
 " ----------------------------------------------------------------------------
-call s:SetStyling("Normal", s:g_fg, s:none, s:t_white, s:t_black2)
+call s:SetStyling("Normal", s:g_fg, s:g_bg, s:t_white, s:t_black2)
 call s:SetStyling("Title", s:g_tag, s:none, s:t_white, s:t_black2)
 call s:SetStyling("Search", s:none, s:none, s:t_white, s:t_black2, "standout")
 call s:SetStyling("Visual", s:none, s:g_selection, s:t_white, s:t_black2)
@@ -75,7 +75,7 @@ call s:SetStyling("TabLine", s:g_comment, s:none, s:t_white, s:t_black2, "underl
 call s:SetExactAs("TabLineFill", "TabLine")
 
 " Color for set cc=80 
-call s:SetStyling("ColorColumn", s:none, s:g_line, s:none, s:none)
+call s:SetStyling("ColorColumn", s:none, s:none, s:none, s:none, "bold")
 
 " Numbers on the left
 call s:SetStyling("LineNr", s:g_guide, s:none, s:t_white, s:t_black2)
@@ -151,14 +151,18 @@ call s:SetStyling("CursorLineConceal", s:g_guide, s:none, s:t_white, s:t_black2)
 
 " GitGutter:
 " ----------------------------------------------------------------------------
-call s:SetStyling("GitGutterAdd", s:g_string, s:none, s:t_white, s:t_black2)
-call s:SetStyling("GitGutterChange", s:g_tag, s:none, s:t_white, s:t_black2)
-call s:SetStyling("GitGutterDelete", s:g_markup, s:none, s:t_white, s:t_black2)
-call s:SetStyling("GitGutterChangeDelete", s:g_function, s:none, s:t_white, s:t_black2)
+call s:SetStyling("GitGutterAdd", s:g_comment, s:none, s:t_white, s:t_black2)
+call s:SetExactAs("GitGutterChange", "GitGutterAdd")
+call s:SetExactAs("GitGutterDelete", "GitGutterAdd")
+"call s:SetStyling("GitGutterChangeDelete", s:g_function, s:none, s:t_white, s:t_black2)
+"call s:SetStyling("GitGutterChange", s:g_tag, s:none, s:t_white, s:t_black2)
+"call s:SetStyling("GitGutterDelete", s:g_markup, s:none, s:t_white, s:t_black2)
+"call s:SetStyling("GitGutterChangeDelete", s:g_function, s:none, s:t_white, s:t_black2)
 
 " Coc Colors:
 " ----------------------------------------------------------------------------
 call s:SetStyling("CocPumSearch", s:g_tag, s:none, s:t_white, s:t_black2)
+call s:SetStyling("CocHighlightText", s:g_fg, s:g_comment, s:t_white, s:t_black2)
 
 " Diff Syntax Highlighting:
 " ----------------------------------------------------------------------------

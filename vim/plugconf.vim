@@ -6,7 +6,6 @@ call plug#begin()
   Plug 'junegunn/fzf.vim'
   " Low distraction mode
   Plug 'junegunn/goyo.vim'
-  Plug 'amix/vim-zenroom2'
   " Git plugins
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
@@ -17,5 +16,12 @@ call plug#begin()
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Colors
   Plug 'chrisbra/Colorizer'
+  " Autoformat
+  Plug 'vim-autoformat/vim-autoformat'
+  " Snippets
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  " Commentary
+  Plug 'tpope/vim-commentary'
 call plug#end()
 
