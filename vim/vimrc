@@ -1,60 +1,43 @@
-" Spaces insted of tabs
-" You could use :retab
-set tabstop=4       " Number of spaces that a <Tab> counts for
-set shiftwidth=4    " Number of spaces to use for each step of (auto)indent
+set tabstop=4
+set shiftwidth=4
 set expandtab
-" Timeout on key strokes
 set notimeout
 set ttimeout
-" Show hiden symbols
-" autocmd BufWinEnter <buffer> match Error /\s\+$/  
 set list
-nnoremap <Leader><F12> :set list!<CR>
 set listchars=tab:>-,extends:>,precedes:<,space:·
 set fillchars=eob:~,vert:│,stl:🮂,stlnc:🮂
-" Case insensitive search
+set cursorline
+set rnu
+set nu
+set showcmd
+
 set ignorecase
 set smartcase
-" Enable true colors support
 set termguicolors 
+" autocmd BufWinEnter <buffer> match Error /\s\+$/  
+
+colorscheme gecs
+
+" Enable file type detection
+filetype plugin on
+" Linters
+let g:syntastic_yaml_checkers = ['yamllint']
+let g:sql_type_default = 'pgsql' " Plug pgsql.vim
 
 " Dumb Netrw flag to move and copy
 " https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
 let g:netrw_keepdir = 0
 
-" Line number on the left
-set rnu
-set nu
-
-" Colorscheme
-colorscheme gecs
-" Highlight cursorline
-set cursorline
-
-" Enable file type detection
-filetype plugin on
-
-" See pressed key
-set showcmd
-
-" Linters
-let g:syntastic_yaml_checkers = ['yamllint']
-let g:sql_type_default = 'pgsql' " Plug pgsql.vim
-" Extends if HTML
+" Extends in HTML
 augroup HtmlFileType
     autocmd!
     autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 augroup END
 
 " External configs 
-"" Thirdparty (stolen) ideas
 source ~/.vim/thirdpartyideas.vim
-"" Plug manager
 source ~/.vim/plugconf.vim
-"" Go mode
-source ~/.vim/goconf.vim
-"" Keybindings
+source ~/.vim/gomod.vim
 source ~/.vim/keybindings.vim
-"" Coc
 source ~/.vim/coc-config.vim
 let g:coc_disable_startup_warning = 1

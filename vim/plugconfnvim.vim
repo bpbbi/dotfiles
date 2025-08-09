@@ -19,6 +19,7 @@ call plug#begin()
   " Autoformat
   Plug 'vim-autoformat/vim-autoformat'
   " Snippets
+  Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
   " Commentary
   Plug 'tpope/vim-commentary'

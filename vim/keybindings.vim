@@ -16,13 +16,14 @@ nnoremap <Leader>j J
 nnoremap <Leader>w     :w<CR>
 command! W w
 nnoremap <leader>v :vnew<CR>
+nnoremap <Leader><F12> :set list!<CR>
 
 " Windows
 nnoremap <Leader>n :vnew<CR>
 " Terminal open
-nnoremap <Leader>` :vnew <bar> terminal<CR>
+nnoremap <Leader>` :vnew <bar>:!export SHELL=/bin/bash <bar> terminal<CR>
 "" Exit terminal mode
-tnoremap <C-`> <C-\><C-n>
+tnoremap <ESC> <C-\><C-n>
 "" Moving between windows
 nnoremap <S-J> <C-W>j
 nnoremap <S-K> <C-W>k
