@@ -52,7 +52,8 @@ for vim_dir in $VIM_CONF_DIR $NVIM_CONF_DIR; do
   cp $DEV_VIM_RC $DEV_VIM_CONF_FILES $vim_dir
   cp $DEV_VIM_COLORS_FILES $VIM_COLOURS_DIR;
 done
-mv "${NVIM_CONF_DIR}vimrc" "${NVIM_CONF_DIR}init.vim"
+mv "${NVIM_CONF_DIR}" "${NVIM_CONF_DIR}init.vim"
+mv "${NVIM_CONF_DIR}plugconfnvim.vim" "${NVIM_CONF_DIR}plugconf.vim"
 nvim -c 'PlugInstall' -c 'qa'
 vim -c 'PlugInstall' -c 'qa'
 
@@ -60,4 +61,10 @@ vim -c 'PlugInstall' -c 'qa'
 GIT_CONFIG=~/.gitconfig
 DEV_GITCONFIG_FILE=$CUR_DIR/git/gitconfig
 cp $DEV_GITCONFIG_FILE $GIT_CONFIG
+
+#sway
+SWAY_CONFIG=~/.config/sway
+mkdir -p $SWAY_CONFIG
+DEV_SWAY_CONFIG=$CUR_DIR/sway/config
+cp $DEV_SWAY_CONFIG $SWAY_CONFIG
 
