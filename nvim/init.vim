@@ -21,8 +21,8 @@ colorscheme gecs
 " Enable file type detection
 filetype plugin on
 " Linters
-"let g:syntastic_yaml_checkers = ['yamllint']
-"let g:sql_type_default = 'pgsql' " Plug pgsql.vim
+let g:syntastic_yaml_checkers = ['yamllint']
+let g:sql_type_default = 'pgsql' " Plug pgsql.vim
 
 " Dumb Netrw flag to move and copy
 " https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
@@ -37,7 +37,7 @@ augroup END
 " External configs 
 source ~/.vim/thirdpartyideas.vim
 source ~/.vim/plugconf.vim
-"source ~/.vim/gomod.vim
+source ~/.vim/gomod.vim
 source ~/.vim/keybindings.vim
-"source ~/.vim/coc-config.vim
-"let g:coc_disable_startup_warning = 1
+source ~/.vim/coc-config.vim
+let g:coc_disable_startup_warning = 1
