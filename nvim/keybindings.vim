@@ -16,7 +16,9 @@ nnoremap <Leader>j J
 nnoremap <Leader>w     :w<CR>
 command! W w
 nnoremap <leader>v :vnew<CR>
-nnoremap <Leader><F12> :set list!<CR>
+"" Toggle state
+nnoremap <Leader>0 :set list!<CR>
+nnoremap <Leader>9 :GitGutterToggle<CR>
 
 " Windows
 nnoremap <Leader>n :vnew<CR>

@@ -35,9 +35,9 @@ augroup HtmlFileType
 augroup END
 
 " External configs 
-source ~/.vim/thirdpartyideas.vim
-source ~/.vim/plugconf.vim
-source ~/.vim/gomod.vim
-source ~/.vim/keybindings.vim
-source ~/.vim/coc-config.vim
+source ~/.config/nvim/thirdpartyideas.vim
+source ~/.config/nvim/plugconf.vim
+source ~/.config/nvim/gomod.vim
+source ~/.config/nvim/keybindings.vim
+source ~/.config/nvim/coc-config.vim
 let g:coc_disable_startup_warning = 1
