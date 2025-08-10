@@ -17,8 +17,8 @@ alias ls='ls --color'
 alias ll='ls --color -lA --group-directories-first'
 alias :q='exit'
 # Add go path
-path+=('/usr/lib/go-1.23/bin/')
-path+=('~/go/bin/')
+path+=("/usr/lib/go-1.23/bin/")
+path+=("$HOME/go/bin/")
 # PROMPT
 source "$HOME/.config/zsh/prompt.zsh"
 
