@@ -12,10 +12,7 @@ nnoremap <Leader>e :Lexplore<CR>
 let g:netrw_winsize = 30
 
 " Editor conf
-nnoremap <Leader>j J
-nnoremap <Leader>w     :w<CR>
 command! W w
-nnoremap <leader>v :vnew<CR>
 "" Toggle state
 nnoremap <Leader>0 :set list!<CR>
 nnoremap <Leader>9 :GitGutterToggle<CR>
@@ -26,15 +23,6 @@ nnoremap <Leader>n :vnew<CR>
 nnoremap <Leader>` :vnew <bar>:!export SHELL=/bin/bash <bar> terminal<CR>
 "" Exit terminal mode
 tnoremap <ESC> <C-\><C-n>
-"" Moving between windows
-nnoremap <S-J> <C-W>j
-nnoremap <S-K> <C-W>k
-nnoremap <S-H> <C-W>h
-nnoremap <S-L> <C-W>l
-nnoremap <C-S-h> <C-W>H
-nnoremap <C-S-j> <C-W>J
-nnoremap <C-S-k> <C-W>K
-nnoremap <C-S-l> <C-W>L
 "" Moving inside windows
 noremap <C-h> ^
 noremap <C-l> $
@@ -55,8 +43,6 @@ nnoremap <Leader>z :Goyo<CR>
 " FZF mappings
 nnoremap <Leader>f     :Files<CR>
 nnoremap <Leader><C-F> :Rg<CR>
-nnoremap <Leader>m     :Marks<CR>
-nnoremap <Leader>M     :delmarks A-Z :delmarks 0-9 :delm!<CR>
 inoremap <expr> <c-s> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 0.3 }})
 
 " GoMapping

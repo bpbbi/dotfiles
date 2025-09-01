@@ -14,7 +14,9 @@ call plug#begin()
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " Autocomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " Colors
+  " Multiline cursor
+ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+ " Colors
   "Plug 'chrisbra/Colorizer'
   " Autoformat
   Plug 'vim-autoformat/vim-autoformat'

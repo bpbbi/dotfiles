@@ -18,6 +18,9 @@ set termguicolors
 
 colorscheme gecs
 
+" Enable tabline always
+set showtabline=2
+
 " Enable file type detection
 filetype plugin on
 " Linters
