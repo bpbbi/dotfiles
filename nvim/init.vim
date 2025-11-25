@@ -10,7 +10,8 @@ set cursorline
 set rnu
 set nu
 set showcmd
-
+" No resize while moving windows
+set noequalalways
 set ignorecase
 set smartcase
 set termguicolors 
@@ -36,7 +37,13 @@ augroup HtmlFileType
     autocmd!
     autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 augroup END
-
+" Terminal group
+augroup Term
+  autocmd!
+  autocmd TermOpen * setlocal signcolumn=no nonumber norelativenumber
+  autocmd BufWinEnter,WinEnter term://* startinsert
+  autocmd BufLeave term://* stopinsert
+augroup END
 " External configs 
 source ~/.config/nvim/thirdpartyideas.vim
 source ~/.config/nvim/plugconf.vim

@@ -9,13 +9,14 @@ call plug#begin()
   " Git plugins
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+  " Plug 'kdheepak/lazygit.nvim'
   " Lang plugins
   Plug 'lifepillar/pgsql.vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " Autocomplete
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Multiline cursor
- Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
  " Colors
   "Plug 'chrisbra/Colorizer'
   " Autoformat

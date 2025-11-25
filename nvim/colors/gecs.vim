@@ -10,7 +10,8 @@ let colors_name = "gecs"
 " Palettes:
 " -----------------------------------------------------------------------------
 let s:g_bg        = "#212d33"
-let s:g_comment   = "#5C6773"
+let s:g_comment   = "#168059"
+let s:g_muted     = "#5C6773"
 let s:g_markup    = "#F07178"
 let s:g_constant  = "#D4BFFF"
 let s:g_operator  = "#80D4FF"
@@ -70,8 +71,8 @@ call s:SetStyling("Search", s:none, s:none, s:t_white, s:t_black2, "standout")
 call s:SetStyling("Visual", s:none, s:g_selection, s:t_white, s:t_black2)
 
 " Tabs
-call s:SetStyling("TabLineSel", s:g_comment, s:g_fg, s:t_white, s:t_black2, "standout,underline")
-call s:SetStyling("TabLine", s:g_comment, s:none, s:t_white, s:t_black2, "underline")
+call s:SetStyling("TabLineSel", s:g_muted, s:g_fg, s:t_white, s:t_black2, "standout,underline")
+call s:SetStyling("TabLine", s:g_muted, s:none, s:t_white, s:t_black2, "underline")
 call s:SetExactAs("TabLineFill", "TabLine")
 
 " Color for set cc=80 
@@ -88,7 +89,7 @@ call s:SetStyling("VertSplit", s:g_selection, s:none, s:t_white, s:t_black2)
 call s:SetStyling("NonText", s:g_guide, s:none, s:t_white, s:t_black2)
 
 " Separator between command and text
-call s:SetStyling("StatusLine", s:g_comment, s:none, s:t_white, s:t_black2)
+call s:SetStyling("StatusLine", s:g_muted, s:none, s:t_white, s:t_black2)
 call s:SetStyling("StatusLineNC", s:g_selection, s:none, s:t_white, s:t_black2)
 
 call s:SetStyling("Folded", s:g_fg_idle, s:none, s:t_white, s:t_black2)
@@ -96,9 +97,6 @@ call s:SetStyling("FoldColumn", s:g_fg, s:none, s:t_white, s:t_black2)
 
 call s:SetStyling("Directory", s:g_accent, s:none, s:t_white, s:t_black2)
 
-call s:SetStyling("DiffAdd", s:g_string, s:none, s:t_white, s:t_black2)
-call s:SetStyling("DiffChange", s:g_tag, s:none, s:t_white, s:t_black2)
-call s:SetStyling("DiffText", s:g_fg, s:none, s:t_white, s:t_black2)
 call s:SetStyling("ErrorMsg", s:g_fg, s:g_error, s:t_white, s:t_black2, "standout")
 call s:SetStyling("SignColumn", s:g_fg, s:none, s:t_white, s:t_black2)
 
@@ -151,7 +149,7 @@ call s:SetStyling("CursorLineConceal", s:g_guide, s:none, s:t_white, s:t_black2)
 
 " GitGutter:
 " ----------------------------------------------------------------------------
-call s:SetStyling("GitGutterAdd", s:g_comment, s:none, s:t_white, s:t_black2)
+call s:SetStyling("GitGutterAdd", s:g_muted, s:none, s:t_white, s:t_black2)
 call s:SetExactAs("GitGutterChange", "GitGutterAdd")
 call s:SetExactAs("GitGutterDelete", "GitGutterAdd")
 "call s:SetStyling("GitGutterChangeDelete", s:g_function, s:none, s:t_white, s:t_black2)
@@ -162,10 +160,13 @@ call s:SetExactAs("GitGutterDelete", "GitGutterAdd")
 " Coc Colors:
 " ----------------------------------------------------------------------------
 call s:SetStyling("CocPumSearch", s:g_tag, s:none, s:t_white, s:t_black2)
-call s:SetStyling("CocHighlightText", s:g_fg, s:g_comment, s:t_white, s:t_black2)
+call s:SetStyling("CocHighlightText", s:g_fg, s:g_muted, s:t_white, s:t_black2)
 
 " Diff Syntax Highlighting:
 " ----------------------------------------------------------------------------
+call s:SetStyling("DiffAdd", s:g_string, s:g_comment, s:t_white, s:t_black2)
+call s:SetExactAs("DiffChange", "DiffAdd")
+call s:SetStyling("DiffText", s:g_fg, s:none, s:t_white, s:t_black2)
 " Diff
 "   diffOldFile
 "   diffNewFile

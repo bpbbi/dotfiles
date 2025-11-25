@@ -7,25 +7,36 @@ vnoremap <Leader>{ <esc>`>a}<esc>`<i{<esc>
 vnoremap <Leader>1 <esc>`>a'<esc>`<i'<esc>
 vnoremap <Leader>2 <esc>`>a"<esc>`<i"<esc>
 
+" Copy to os clipboard
+nnoremap <M-c> <S-v> "+y
+vnoremap <M-c> "+y
+
 " Netrw
 nnoremap <Leader>e :Lexplore<CR>
-let g:netrw_winsize = 30
+let g:netrw_winsize = 10
 
 " Editor conf
 command! W w
 "" Toggle state
 nnoremap <Leader>0 :set list!<CR>
 nnoremap <Leader>9 :GitGutterToggle<CR>
+nnoremap <Leader>8 :call CocAction('diagnosticToggleBuffer')<CR>
 
 " Windows
 nnoremap <Leader>n :vnew<CR>
 " Terminal open
-nnoremap <Leader>` :vnew <bar>:!export SHELL=/bin/bash <bar> terminal<CR>
+"nnoremap <Leader>` :split <bar>:!export SHELL=/bin/bash <bar> terminal<CR>
+let $SHELL="/bin/bash"
+nnoremap <Leader>` :below split <bar> terminal <CR> :res 9 <CR> A
 "" Exit terminal mode
 tnoremap <ESC> <C-\><C-n>
 "" Moving inside windows
 noremap <C-h> ^
 noremap <C-l> $
+nnoremap <silent><C-j> :wincmd j<CR>
+nnoremap <silent><C-k> :wincmd k<CR>
+nnoremap <silent><C-S-j> :wincmd J<CR>
+nnoremap <silent><C-S-k> :wincmd K<CR>
 
 " Tabs
 nnoremap <Leader><S-n> :tabnew<CR>

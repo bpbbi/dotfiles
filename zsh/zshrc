@@ -17,6 +17,9 @@ alias ls='ls --color'
 alias ll='ls --color -lA --group-directories-first'
 alias :q='exit'
 # Add go path
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.ghcup/bin:$PATH"
 path+=("/usr/lib/go-1.23/bin/")
 path+=("$HOME/go/bin/")
 # PROMPT
