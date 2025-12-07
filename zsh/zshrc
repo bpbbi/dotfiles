@@ -15,6 +15,7 @@ compinit
 # Aliases
 alias ls='ls --color'
 alias ll='ls --color -lA --group-directories-first'
+alias qd.ts='date --iso-8601=seconds'
 alias :q='exit'
 # Add go path
 export PATH="$HOME/.local/bin:$PATH"

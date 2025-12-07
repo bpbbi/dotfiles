@@ -11,6 +11,9 @@ vnoremap <Leader>2 <esc>`>a"<esc>`<i"<esc>
 nnoremap <M-c> <S-v> "+y
 vnoremap <M-c> "+y
 
+" Timestamp
+"inoremap <C-s>
+
 " Netrw
 nnoremap <Leader>e :Lexplore<CR>
 let g:netrw_winsize = 10
