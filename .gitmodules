@@ -1,3 +1,6 @@
 [submodule "nvim/modules/vim-plug"]
 	path = nvim/modules/vim-plug
 	url = https://github.com/junegunn/vim-plug
+[submodule "yazi/flavors"]
+	path = yazi/flavors
+	url = https://github.com/yazi-rs/flavors.git

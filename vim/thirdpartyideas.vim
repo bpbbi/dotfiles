@@ -1,1 +1,1 @@
-../nvim/thirdpartyideas.vim
+../nvimold/thirdpartyideas.vim

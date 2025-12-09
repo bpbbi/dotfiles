@@ -1,1 +1,1 @@
-../nvim/keybindings.vim
+../nvimold/keybindings.vim

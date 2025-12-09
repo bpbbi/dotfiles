@@ -100,3 +100,4 @@ export PATH="$HOME/.ghcup/bin:$PATH"
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 
+eval "$(dircolors -b ~/.dircolors)"

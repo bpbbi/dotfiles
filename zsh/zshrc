@@ -25,4 +25,4 @@ path+=("/usr/lib/go-1.23/bin/")
 path+=("$HOME/go/bin/")
 # PROMPT
 source "$HOME/.config/zsh/prompt.zsh"
-
+eval "$(dircolors -b ~/.dircolors)"
