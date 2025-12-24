@@ -10,7 +10,7 @@ return {
 
     -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
     -- Need to **configure separately**
-    { 'ms-jpq/coq.thirdparty', branch = "3p" }
+    { "ms-jpq/coq.thirdparty", branch = "3p" },
     -- - shell repl
     -- - nvim lua api
     -- - scientific calculator
@@ -19,8 +19,8 @@ return {
   },
   init = function()
     vim.g.coq_settings = {
-        auto_start = true, -- if you want to start COQ at startup
-        -- Your COQ settings here
+      auto_start = true, -- if you want to start COQ at startup
+      -- Your COQ settings here
     }
   end,
   config = function()
