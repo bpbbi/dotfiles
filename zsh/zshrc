@@ -1,11 +1,8 @@
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-# Timeout to keystrokes
 KEYTIMEOUT=1
 bindkey -v
-# End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
@@ -17,12 +14,15 @@ alias ls='ls --color'
 alias ll='ls --color -lA --group-directories-first'
 alias qd.ts='date --iso-8601=seconds'
 alias :q='exit'
+
+# Editor
+export EDITOR="nvim"
+
 # Add go path
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.ghcup/bin:$PATH"
-path+=("/usr/lib/go-1.23/bin/")
-path+=("$HOME/go/bin/")
+path+=("/usr/local/go/bin")
+
 # PROMPT
 source "$HOME/.config/zsh/prompt.zsh"
-eval "$(dircolors -b ~/.dircolors)"
