@@ -74,7 +74,7 @@ call s:SetStyling("TabLineSel", s:g_comment, s:g_fg, "standout,underline")
 call s:SetStyling("TabLine", s:g_comment, s:none, "underline")
 call s:SetExactAs("TabLineFill", "TabLine")
 
-" Color for set cc=80 
+" Color for set cc=80
 call s:SetStyling("ColorColumn", s:none, s:none, "bold")
 
 " Numbers on the left
@@ -99,7 +99,7 @@ call s:SetStyling("Directory", s:g_accent, s:none)
 call s:SetStyling("DiffAdd", s:g_string, s:none)
 call s:SetStyling("DiffChange", s:g_tag, s:none)
 call s:SetStyling("DiffText", s:g_fg, s:none)
-call s:SetStyling("ErrorMsg", s:g_fg, s:g_error, "standout")
+" call s:SetStyling("ErrorMsg", s:g_fg, s:none, "standout")
 call s:SetStyling("SignColumn", s:g_fg, s:none)
 
 call s:SetStyling("MatchParen", s:g_fg, s:none, "underline")
@@ -109,6 +109,7 @@ call s:SetStyling("MoreMsg", s:g_string, s:none)
 " Popup Menus:
 "" Menu in command line:
 call s:SetStyling("NormalFloat", s:none, s:none)
+" call s:SetStyling("FloatBorder", s:none, s:g_line)
 call s:SetExactAs("WildMenu", "Normal")
 call s:SetStyling("Menu", s:g_fg, s:g_accent, "reverse")
 call s:SetStyling("Tooltip", s:g_fg, s:g_accent, "reverse")
@@ -143,7 +144,7 @@ call s:SetStyling("Structure", s:g_special, s:none)
 call s:SetStyling("Special", s:g_special, s:none)
 call s:SetStyling("Underlined", s:g_tag, s:none, "underline")
 call s:SetStyling("Ignore", s:g_fg, s:none)
-call s:SetStyling("Error", s:g_fg, s:g_error)
+call s:SetStyling("Error", s:g_fg, s:none, "standout")
 call s:SetStyling("Todo", s:g_markup, s:none)
 " Quickfix window highlighting
 call s:SetStyling("qfLineNr", s:g_keyword, s:none)
@@ -162,7 +163,7 @@ call s:SetStyling("CursorLineConceal", s:g_guide, s:none)
 
 " " Coc Colors:
 " " ----------------------------------------------------------------------------
-call s:SetStyling("CocPumSearch", s:g_tag, s:none)
+call s:SetStyling("CocPumSearch", s:g_tag, s:g_comment)
 call s:SetStyling("CocHighlightText", s:g_fg, s:g_comment)
 
 " Snacks HL
