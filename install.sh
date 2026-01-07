@@ -22,12 +22,15 @@ CONF_TMUX=~/.tmux.conf
 cp $CUR_DIR/tmux/tmux.conf $CONF_TMUX
 
 #kmonad
-CONF_KMONAD=~/.config/kmonad/config.kbd
+CONF_KMONAD=~/.config/kmonad/
 DEV_KMONAD=$CUR_DIR/kmonad/config.kbd
+DEV_KMONAD2=$CUR_DIR/kmonad/config2.kbd
 kmonad -d $DEV_KMONAD
+kmonad -d $DEV_KMONAD2
 errcode=$? 
 if [ $errcode -eq 0 ]; then 
   cp $DEV_KMONAD $CONF_KMONAD 
+  cp $DEV_KMONAD2 $CONF_KMONAD 
 else
   echo Checking kmonad config exit with non zero code
 fi

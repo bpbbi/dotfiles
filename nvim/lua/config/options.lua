@@ -16,3 +16,20 @@ zen = {
     }, -- This needs to be 99, 100 results in same behaviour as default setup
   },
 }
+
+vim.opt.tabstop=4
+vim.opt.shiftwidth=4
+vim.opt.expandtab = true
+vim.opt.timeout = false
+vim.opt.ttimeout = true
+vim.opt.list = true
+vim.opt.listchars = {
+  space = "·",
+  tab = "<-",
+  extends= ">",
+  precedes = "<",
+}
+vim.opt.fillchars = {
+  eob = "~",
+  vert = "⎸",
+}

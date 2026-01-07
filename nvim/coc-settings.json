@@ -1,6 +1,9 @@
 {
     "suggest.noselect": true,
     "suggest.enablePreselect": false,
-    "diagnostic.checkCurrentLine": true
+    "diagnostic.checkCurrentLine": true,
+    "outline.splitCommand": "topleft 30 vsplit",
+    "outline.previewBorderRounded": true,
+    "outline.keepWindow": true
 }
 

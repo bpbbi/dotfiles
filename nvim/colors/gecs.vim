@@ -66,7 +66,7 @@ endfunction
 " ----------------------------------------------------------------------------
 call s:SetStyling("Normal", s:g_fg, s:g_bg)
 call s:SetStyling("Title", s:g_tag, s:none)
-call s:SetStyling("Search", s:none, s:none, "standout")
+call s:SetStyling("Search", s:g_fg, s:none, "standout")
 call s:SetStyling("Visual", s:none, s:g_selection)
 
 " Tabs
@@ -108,8 +108,8 @@ call s:SetStyling("MoreMsg", s:g_string, s:none)
 
 " Popup Menus:
 "" Menu in command line:
-call s:SetStyling("NormalFloat", s:none, s:none)
-" call s:SetStyling("FloatBorder", s:none, s:g_line)
+call s:SetStyling("NormalFloat", s:none, s:g_line)
+"call s:SetStyling("FloatBorder", s:none, s:g_line)
 call s:SetExactAs("WildMenu", "Normal")
 call s:SetStyling("Menu", s:g_fg, s:g_accent, "reverse")
 call s:SetStyling("Tooltip", s:g_fg, s:g_accent, "reverse")
@@ -145,11 +145,13 @@ call s:SetStyling("Special", s:g_special, s:none)
 call s:SetStyling("Underlined", s:g_tag, s:none, "underline")
 call s:SetStyling("Ignore", s:g_fg, s:none)
 call s:SetStyling("Error", s:g_fg, s:none, "standout")
-call s:SetStyling("Todo", s:g_markup, s:none)
+call s:SetStyling("Todo", s:g_markup, s:none, "standout")
 " Quickfix window highlighting
 call s:SetStyling("qfLineNr", s:g_keyword, s:none)
 call s:SetStyling("Conceal", s:g_comment, s:none, "underline")
 call s:SetStyling("CursorLineConceal", s:g_guide, s:none)
+" WhichKeyIcon
+call s:SetStyling("WhichKeyIcon", s:none, s:none)
 
 " " GitGutter:
 " " ----------------------------------------------------------------------------
@@ -163,15 +165,23 @@ call s:SetStyling("CursorLineConceal", s:g_guide, s:none)
 
 " " Coc Colors:
 " " ----------------------------------------------------------------------------
-call s:SetStyling("CocPumSearch", s:g_tag, s:g_comment)
+"call s:SetStyling("CocPumSearch", s:g_tag, s:g_comment)
+call s:SetStyling("CocListLine", s:none, s:g_bg, "standout")
+"call s:SetStyling("CocPumSelected", s:g_tag, s:g_comment, "standout")
+"call s:SetStyling("CocMenuSel", s:g_tag, s:g_comment, "standout")
+"call s:SetStyling("CocMenuSelHighlight", s:g_tag, s:g_comment, "standout")
+"call s:SetStyling("CocSearch", s:g_tag, s:g_comment, "standout")
+"call s:SetStyling("CocPumMenu", s:g_tag, s:g_comment, "standout")
+"
 call s:SetStyling("CocHighlightText", s:g_fg, s:g_comment)
+"call s:SetStyling("CocFloatActive", s:g_fg, s:g_comment)
 
 " Snacks HL
 call s:SetStyling("SnacksPicker", s:none, s:none)
 call s:SetStyling("SnacksPickerBorder", s:none, s:none)
-call s:SetStyling("SnacksIndentScope", s:g_fg_idle, s:none)
 call s:SetStyling("SnacksPickerList", s:none, s:none)
-"call s:SetStyling("Normal", s:none, s:none)
+" this -> |
+call s:SetStyling("SnacksIndentScope", s:g_fg_idle, s:none)
 
 " Diff Syntax Highlighting:
 " ----------------------------------------------------------------------------
