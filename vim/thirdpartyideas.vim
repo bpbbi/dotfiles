@@ -1,1 +1,0 @@
-../nvimold/thirdpartyideas.vim

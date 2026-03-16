@@ -1,1 +1,0 @@
-../../nvim/colors/gecs.vim
