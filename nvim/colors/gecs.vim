@@ -153,6 +153,7 @@ call s:SetStyling("CursorLineConceal", s:g_guide, s:none)
 " WhichKeyIcon
 call s:SetStyling("WhichKeyIcon", s:none, s:none)
 
+call s:SetStyling("Substitute", s:g_markup, s:none, "bold,standout")
 " " GitGutter:
 " " ----------------------------------------------------------------------------
 " call s:SetStyling("GitGutterAdd", s:g_comment, s:none)

@@ -17,7 +17,7 @@ M.config = function()
   -- diagnostics appeared/became resolved
   vim.opt.signcolumn = "yes"
 
-  km = require("config.coc-keymaps")
+  local km = require("config.coc-keymaps")
   km.init()
 end
 return M

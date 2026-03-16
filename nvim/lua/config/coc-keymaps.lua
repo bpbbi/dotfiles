@@ -63,7 +63,6 @@ M.init = function()
 
     keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
-
     -- Highlight the symbol and its references on a CursorHold event(cursor is idle)
     vim.api.nvim_create_augroup("CocGroup", {})
     vim.api.nvim_create_autocmd("CursorHold", {
@@ -206,7 +205,7 @@ M.init = function()
     -- Show commands
     keyset("n", "<leader>ca", ":<C-u>CocList commands<cr>", { desc = "Commands", silent = true, nowait = true })
     -- Find symbol of current document
-    keyset("n", "<leader>co", ":<C-u>CocList outline<cr>", { desc = "Outline", silent = true, nowait = true })
+    -- keyset("n", "<leader>co", ":<C-u>CocList outline<cr>", { desc = "Outline", silent = true, nowait = true })
     -- Search workspace symbols
     keyset("n", "<leader>cs", ":<C-u>CocList -I symbols<cr>", { desc = "Symbols", silent = true, nowait = true })
     -- Do default action for next item

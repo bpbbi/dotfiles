@@ -4,6 +4,12 @@
     "diagnostic.checkCurrentLine": true,
     "outline.splitCommand": "topleft 30 vsplit",
     "outline.previewBorderRounded": true,
-    "outline.keepWindow": true
+    "outline.keepWindow": true,
+    "outline.sortBy": "position",
+    "outline.autoWidth": false,
+    "outline.previewMaxWidth": 30,
+    "outline.autoPreview": false,
+    "outline.checkBufferSwitch": false,
+    "outline.followCursor": true
 }
 
