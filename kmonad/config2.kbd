@@ -5,6 +5,7 @@
 )
 
 (defsrc
+  mininteresting volu vold 
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del   ins  prnt slck pp
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  nlck kp/  kp*  kp-
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \     kp7  kp8  kp9  kp+
@@ -22,20 +23,22 @@
 )
 
 (deflayer qwerty
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del    ins  prnt slck pp 
+  mininteresting volu vold 
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del    ins  prnt slck pp
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc   nlck kp/  kp*  kp-
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \      kp7  kp8  kp9  kp+
-  @ecl a    s    d    f    g    h    j    k    l    ;    '         ret    kp4  kp5  kp6
-  lsft z    x    c    v    b    n    m    ,    .    /              rsft   kp1  kp2  kp3  kprt 
+  tab  q    w    e    r    t    y    u    i    o    p    bspc del  \      kp7  kp8  kp9  kp+
+  @ecl a    s    d    f    g    h    j    k    l    ;    ret       ret    kp4  kp5  kp6
+  lsft z    x    c    v    b    n    m    ,    .    /              rsft   kp1  kp2  kp3  kprt
   XX   lmet lalt           spc            @sym rctl left up   down right  kp0       kp.
 )
 
 (deflayer symbols 
-  _    _    _    _    _    _    _    _    _    _    _    _    _  _  _ _ _ _ 
-  `    '    "    .    $    _    _    _    _    _    _    _    _  _  _ _ _ _ 
-  _    ~    <    >    #    \_   XX   XX   &    ^    XX   _    _  _  _ _ _ _ 
-  lctl \\    [    ]    .    /    XX   =    kp+  kp-  :    "      _  _ _ _ 
-  _    !    \(   \)   %    @    *    ?    ,    .    /            _  _ _ _ _ 
-  _    _    _              _              XX   _    _    _    _  _  _ _
+  mininteresting volu vold 
+  _    _    _    _    _    _    _    _    _    _    _    _  _   _ _ _ _ _
+  `    '    "    .    $    _    _    _    _    _    _    _  _   _ _ _ _ _
+  _    ~    <    >    #    \_   XX   XX   &    ^    XX   XX _   _ _ _ _ _
+  lctl \\    [    ]   .    /    XX   =    kp+  kp-  :    _  _   _ _ _
+  _    !    \(   \)   %    @    *    ?    ,    .    /       _   _ _ _ _
+  _    _    _              _              XX   _   _  _  _  _   _ _
 )
 
